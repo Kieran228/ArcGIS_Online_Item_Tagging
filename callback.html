@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+<body>
+    
+</body>
+<script type="module">
+    const match = (window.location.search) ? window.location.search.match(/\?code=([^&]+)/) : false;
+    if(match[1]) {
+        window.opener.oauthCallback(match[1]);
+    }
+    window.close();
+</script>
+</html>
